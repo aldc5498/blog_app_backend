@@ -4,6 +4,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -26,6 +28,7 @@ public class UserDto {
 	@NotEmpty
 	@Size(min = 3, max = 10, message ="Password must be minimum of 3 chars and max of 10 chars")
 	
+	@JsonIgnore
 	private String password;
 	
 	@NotEmpty
